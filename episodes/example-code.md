@@ -32,9 +32,11 @@ Use Git to clone your copy of the spacewalks repository.
 
 ```bash
 $ cd
-$ git clone https://github.com/your-repository/spacewalks.git
+$ git clone https://github.com/your-github-username/spacewalks.git
 $ cd spacewalks
 ```
+
+Don't forget replace to `your-github-username` with your own username.
 
 :::::::::::::::::::::::::::::::::::::::::::::::: instructor
 

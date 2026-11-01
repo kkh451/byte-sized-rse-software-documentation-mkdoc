@@ -75,7 +75,7 @@ First, we will create and activate a virtual environment called "venv" from the 
 ```bash
 $ python3 -m venv venv
 $ source venv/bin/activate # Mac or Linux
-$ source venv_spacewalks/Scripts/activate # Windows
+$ source venv/Scripts/activate # Windows
 (venv) $
 ```
 The active virtual environment is indicated in the command line prompt between the round brackets: "(venv)".

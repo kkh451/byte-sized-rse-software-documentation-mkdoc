@@ -99,6 +99,15 @@ $ mkdocs serve
 ```
 
 ```output
+ │  Material for MkDocs reaches end of life on May 5, 2027.
+ │  Critical fixes and security updates continue until that date.
+ │
+ │  Zensical is its maintained successor, built by the same team.
+ │  Try it alongside MkDocs with your existing mkdocs.yml:
+ │  https://zensical.org/docs/compatibility/mkdocs/migration/
+
+  To disable this warning, set NO_MKDOCS_2_WARNING=1.
+
 INFO    -  Building documentation...
 INFO    -  Cleaning site directory
 INFO    -  Documentation built in 0.24 seconds
@@ -110,6 +119,37 @@ INFO    -  [13:59:32] Browser connected: http://127.0.0.1:8000/
 This command first builds the website from the files in `docs` folder and then serves it locally at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 If you go to that URL in your browser, you can see your basic "Material for MkDocs" website.
 
+An alternative to using the `mkdocs serve` command is the `mkdocs build` command - it will only build the webpages in `site` folder but not serve them as a website at [http://127.0.0.1:8000](http://127.0.0.1:8000).  
+
+```bash
+$ mkdocs build
+````
+
+```output
+ │  Material for MkDocs reaches end of life on May 5, 2027.
+ │  Critical fixes and security updates continue until that date.
+ │
+ │  Zensical is its maintained successor, built by the same team.
+ │  Try it alongside MkDocs with your existing mkdocs.yml:
+ │  https://zensical.org/docs/compatibility/mkdocs/migration/
+  To disable this warning, set NO_MKDOCS_2_WARNING=1.
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: /Users/AnnResearcher/spacewalks/site
+INFO    -  Documentation built in 0.16 seconds
+```
+
+The "built" version of our documentation site is located in the new `site` folder in the root of our project.
+This is where MkDocs tool saves the HTML files compiled from Markdown documentation files. 
+
+This directory serves as your documentation website and can be distributed together with your code.
+Users of your code can then read these pages locally using a Web browser. 
+Alternatively, you can host them as a website that users can navigate to.
+
+Note that we used the setting `use_directory_urls: false` in the `mkdocs.yml` file. This setting ensures that the documentation site is generated with URLs that are easy to navigate locally on a user's device.
+
+You will need to re-run the `mkdocs build` command each time you make a change.
+To see your documentation webpages, you have to navigate directly to the `site` folder and open files in a Web browser.
+
 :::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
 ### Checkpoint: Attendee progress
@@ -117,23 +157,6 @@ If you go to that URL in your browser, you can see your basic "Material for MkDo
 Who has managed to build and serve the website?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-The "built" version of our documentation site is located in the new `site` folder in the root of our project.
-This is where MkDocs tool saves the HTML files compiled from Markdown documentation files. 
-This directory serves as your documentation website and can be distributed together with your code.
-Users of your code can then read these pages locally using a Web browser. 
-Alternatively, you can host them as a website that users can navigate to.
-
-Note that we used the setting `use_directory_urls: false` in the `mkdocs.yml` file.
-This setting ensures that the documentation site is generated with URLs that are easy to navigate locally on a user's device.
-
-An alternative to using the `mkdocs serve` command is the `mkdocs build` command - it will only build the webpages in `site` folder but not serve them as a website at [http://127.0.0.1:8000](http://127.0.0.1:8000).
-You will need to re-run this command each time you make a change.
-To see your documentation webpages, you have to navigate directly to the `site` folder and open files in a Web browser.
-
-```bash
-$ mkdocs build
-````
 
 Let's add more documentation elements to our site - for example a setup guide to help users install and run the software, how-to guides for common tasks and a reference manual for developers.
 

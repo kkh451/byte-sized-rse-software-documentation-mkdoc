@@ -332,8 +332,7 @@ We can also make our documentation available as a live website by deploying our 
 
 As our repository is hosted in GitHub, we can use GitHub Pages - a free service built into GitHub that allows GitHub users to host websites directly from their GitHub repositories.
 
-GitHub Pages deploys and serves site files from a branch - by default this is the `gh-pages` branch. 
-GitHub Pages can also be configured to serve webpages from any other branch within the project repository. 
+By default, GitHub Pages builds and deploys a site with a GitHub Actions workflow.  GitHub Pages can also be configured to publish a site from a branch in the repository. Conventionally, the branch used for an already built site is named `gh-pages`. We will use this approach as it does not require prior experience of GitHub Actions.
 
 Let us commit our documentation to the main branch of our Git repository and push the changes to GitHub.
 
@@ -371,25 +370,21 @@ $ mkdocs gh-deploy
 ```output
 INFO    -  Cleaning site directory
 INFO    -  Building documentation to directory: /Users/AnnResearcher/spacewalks/site
-WARNING -  griffe: eva_data_analysis.py:105: No type or annotation for returned value 'int'
-WARNING -  griffe: eva_data_analysis.py:84: No type or annotation for returned value 1
-WARNING -  griffe: eva_data_analysis.py:33: No type or annotation for returned value 1
-INFO    -  Documentation built in 0.37 seconds
+INFO    -  Documentation built in 0.69 seconds
 WARNING -  Version check skipped: No version specified in previous deployment.
-INFO    -  Copying '/Users/AnnResearcher/spacewalks/site' to 'gh-pages' branch and pushing to
-           GitHub.
-Enumerating objects: 63, done.
-Counting objects: 100% (63/63), done.
-Delta compression using up to 11 threads
-Compressing objects: 100% (60/60), done.
-Writing objects: 100% (63/63), 578.91 KiB | 7.93 MiB/s, done.
-Total 63 (delta 7), reused 0 (delta 0), pack-reused 0
+INFO    -  Copying '/Users/AnnResearcher/spacewalks/site' to 'gh-pages' branch and pushing to GitHub.
+Enumerating objects: 62, done.
+Counting objects: 100% (62/62), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (58/58), done.
+Writing objects: 100% (62/62), 576.83 KiB | 6.95 MiB/s, done.
+Total 62 (delta 7), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (7/7), done.
 remote: 
 remote: Create a pull request for 'gh-pages' on GitHub by visiting:
 remote:      https://github.com/kkh451/spacewalks/pull/new/gh-pages
 remote: 
-To https://github.com/kkh451/spacewalks-dev.git
+To https://github.com/kkh451/spacewalks.git
  * [new branch]      gh-pages -> gh-pages
 INFO    -  Your documentation should shortly be available at: https://kkh451.github.io/spacewalks/
 ```
